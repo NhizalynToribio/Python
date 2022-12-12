@@ -8,3 +8,5 @@ print("**Python Stacks, Queues, and Priority Queues **")
 from collections import deque
 
 class Queue:
+        def__init__(self):
+            self._elements = deque()
