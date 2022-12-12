@@ -13,3 +13,7 @@ lifo.append("3rd")
 
 lifo.pop()
 '3rd'
+
+lifo.po()
+'2nd'
+
