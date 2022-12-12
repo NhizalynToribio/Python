@@ -6,3 +6,5 @@ print("**Python Stacks, Queues, and Priority Queues **")
 # queues.py
 
 from collections import deque
+
+class Queue:
