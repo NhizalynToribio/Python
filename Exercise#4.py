@@ -9,4 +9,9 @@ fifo = Queue("1st", "2nd", "3rd")
 len(fifo)
 3
 
-
+for element in fifo:
+    print(element)
+...
+1st
+2nd
+3rd
