@@ -14,6 +14,8 @@ lifo.append("3rd")
 lifo.pop()
 '3rd'
 
-lifo.po()
+lifo.pop()
 '2nd'
 
+lifo.pop()
+'1st'
