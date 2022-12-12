@@ -7,3 +7,6 @@ from heapq import heappop
 
 heappop(fruits)
 'apple'
+
+fruits
+['banana', 'orange']
