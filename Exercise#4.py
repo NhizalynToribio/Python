@@ -15,3 +15,6 @@ for element in fifo:
 1st
 2nd
 3rd
+
+len(fifo)
+0
