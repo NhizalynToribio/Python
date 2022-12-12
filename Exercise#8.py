@@ -10,3 +10,7 @@ fruits = []
 heappush(fruits, "orange")
 heappush(fruits, "apple")
 heappush(fruits, "banana")
+
+fruits
+['apple', 'orange', 'banana']
+
