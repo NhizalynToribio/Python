@@ -167,3 +167,10 @@ messages.enqueue_with_priority(CRITICAL, "Brake pedal depressed")
 messages.enqueue_with_priority(IMPORTANT, "Hazard lights turned on")
 
 messages.dequeue()
+
+
+# Thirteen Code
+
+class PriorityQueue:
+    def __init__(self):
+        self._elements = []
