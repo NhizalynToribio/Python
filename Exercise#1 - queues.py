@@ -17,3 +17,7 @@ class Queue:
 
     def dequeue(self):
         return self._elements.popleft()
+
+
+# Second Code
+from queues import Queue
