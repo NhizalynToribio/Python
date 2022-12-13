@@ -114,3 +114,8 @@ heappush(fruits, "apple")
 heappush(fruits, "banana")
 
 fruits
+
+
+# Nine Cde
+
+from heapq import heappop
