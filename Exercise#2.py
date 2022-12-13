@@ -12,6 +12,7 @@ from heapq import heapify, heappop, heappush
 from itertools import count
 from typing import Any
 
+
 @dataclass(order=True)
 class Element:
     priority: float
