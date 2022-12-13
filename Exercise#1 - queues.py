@@ -21,3 +21,10 @@ class Queue:
 
 # Second Code
 from queues import Queue
+
+# fifo enqueue statement
+fifo = Queue()
+fifo.enqueue("1st")
+fifo.enqueue("2nd")
+fifo.enqueue("3rd")
+
