@@ -49,6 +49,7 @@ class MutableMinHeap(IterableMixin):
 from math import inf as infinity
 from queues import MutableMinHeap, Queue, Stack
 
+
 def dijkstra_shortest_path(graph, source, destination, weight_factory):
     previous = {}
     visited = set()
@@ -57,4 +58,17 @@ def dijkstra_shortest_path(graph, source, destination, weight_factory):
     for node in graph.nodes:
         unvisited[node] = infinity
     unvisited[source] = 0
+
+    while unvisited:
+        visited.add(node := unvisited.dequeue())
+        for neighbor, weights in graph[node].items():
+            if neighbor not in visited:
+                weight = weight_factory(weights)
+                new_distance = unvisited[node] + weight
+                if new_distance < unvisited[neighbor]:
+                    unvisited[neighbor] = new_distance
+                    previous[neighbor] = node
+
+    return retrace(previous, source, destination)
+
 
