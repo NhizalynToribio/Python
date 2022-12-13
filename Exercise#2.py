@@ -2,20 +2,13 @@ print("**************** PROGRAMMED BY: *****************")
 print("************** NHIZALYN TORIBIO ****************")
 print("*************** BSCOE 2 - 2 *******************")
 print("**Python Stacks, Queues, and Priority Queues **")
+print("*************** EXERCISE # 2 *******************")
 
+# queues.py
 
-from queues import Queue
+from collections import deque
+from dataclasses import dataclass
+from heapq import heapify, heappop, heappush
+from itertools import count
+from typing import Any
 
-# fifo enqueue statement
-fifo = Queue()
-fifo.enqueue("1st")
-fifo.enqueue("2nd")
-fifo.enqueue("3rd")
-
-# fifo dequeue statement
-fifo.dequeue()
-'1st'
-fifo.dequeue()
-'2nd'
-fifo.dequeue()
-'3rd'
