@@ -198,4 +198,6 @@ messages.dequeue()
 # Fifteen Code
 from dataclasses import dataclass
 
-
+@dataclass
+class Message:
+    event: str
