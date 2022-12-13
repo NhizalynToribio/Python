@@ -92,7 +92,6 @@ for element in lifo:
 
 # Seventh Code
 
-
 lifo = []
 
 lifo.append("1st")
@@ -102,3 +101,9 @@ lifo.append("3rd")
 lifo.pop()
 lifo.pop()
 lifo.pop()
+
+
+# Eight Code
+from heapq import heappush
+
+fruits = []
