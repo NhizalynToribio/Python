@@ -39,3 +39,6 @@ fifo.dequeue()
 # Third Code
 
 from collections import deque
+
+
+class Queue:
