@@ -71,3 +71,8 @@ for element in fifo:
     print(element)
 
 len(fifo)
+
+
+# Fifth Code
+
+class Stack(Queue):
