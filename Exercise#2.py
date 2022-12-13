@@ -36,5 +36,8 @@ class MutableMinHeap(IterableMixin):
             self._elements_by_value[unique_value] = element
             heappush(self._elements, element)
 
+    def __getitem__(self, unique_value):
+        return self._elements_by_value[unique_value].priority
+
 
 
