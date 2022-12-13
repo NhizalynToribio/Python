@@ -78,3 +78,7 @@ len(fifo)
 class Stack(Queue):
     def dequeue(self):
         return self._elements.pop()
+
+# Sixth Code
+
+from queues import Stack
