@@ -34,3 +34,8 @@ fifo.dequeue()
 fifo.dequeue()
 
 fifo.dequeue()
+
+
+# Third Code
+
+from collections import deque
