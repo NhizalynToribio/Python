@@ -150,3 +150,7 @@ class PriorityQueue:
 
     def dequeue(self):
         return heappop(self._elements)
+
+
+# Twelve Code
+from queues import PriorityQueue
