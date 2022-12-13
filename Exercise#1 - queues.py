@@ -141,3 +141,5 @@ from collections import deque
 from heapq import heappop, heappush
 
 class PriorityQueue:
+    def __init__(self):
+        self._elements = []
