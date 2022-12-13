@@ -239,3 +239,10 @@ class PriorityQueue:
 
     def dequeue(self):
         return heappop(self._elements)[-1]
+
+
+# Nineteen Code
+class IterableMixin:
+    def __len__(self):
+        return len(self._elements)
+
