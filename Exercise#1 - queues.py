@@ -79,6 +79,9 @@ class Stack(Queue):
     def dequeue(self):
         return self._elements.pop()
 
+
 # Sixth Code
 
 from queues import Stack
+
+lifo = Stack("1st", "2nd", "3rd")
