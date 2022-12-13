@@ -43,3 +43,9 @@ class MutableMinHeap(IterableMixin):
     def dequeue(self):
         return heappop(self._elements).value
 
+
+# second code
+# graph.py
+from math import inf as infinity
+from queues import MutableMinHeap, Queue, Stack
+
