@@ -49,3 +49,6 @@ class MutableMinHeap(IterableMixin):
 from math import inf as infinity
 from queues import MutableMinHeap, Queue, Stack
 
+def dijkstra_shortest_path(graph, source, destination, weight_factory):
+    previous = {}
+    visited = set()
