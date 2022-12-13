@@ -180,3 +180,16 @@ class PriorityQueue:
 
     def dequeue(self):
         return heappop(self._elements)[1]
+
+
+# Fourteen Code
+messages.dequeue()
+
+
+messages.dequeue()
+
+
+messages.dequeue()
+
+
+messages.dequeue(
