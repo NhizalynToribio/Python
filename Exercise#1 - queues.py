@@ -219,3 +219,9 @@ messages.enqueue_with_priority(IMPORTANT, hazard_lights)
 
 # Seventeen Code
 messages.enqueue_with_priority(CRITICAL, Message("ABS engaged"))
+
+
+# Eighteen Code
+from collections import deque
+from heapq import heappop, heappush
+from itertools import count
