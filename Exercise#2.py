@@ -52,3 +52,9 @@ from queues import MutableMinHeap, Queue, Stack
 def dijkstra_shortest_path(graph, source, destination, weight_factory):
     previous = {}
     visited = set()
+
+    unvisited = MutableMinHeap()
+    for node in graph.nodes:
+        unvisited[node] = infinity
+    unvisited[source] = 0
+
