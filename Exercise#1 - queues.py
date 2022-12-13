@@ -58,10 +58,16 @@ class Queue:
     def dequeue(self):
         return self._elements.popleft()
 
-# Fourth Code
 
+# Fourth Code
 
 from queues import Queue
 
 fifo = Queue("1st", "2nd", "3rd")
+len(fifo)
+
+
+for element in fifo:
+    print(element)
+
 len(fifo)
