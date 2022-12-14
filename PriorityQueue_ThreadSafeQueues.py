@@ -8,3 +8,6 @@ print("**** Thread Safe Queues - Priority Queue *****")
 import argparse
 from queue import LifoQueue, PriorityQueue, Queue
 import threading
+
+from random import randint
+from time import sleep
