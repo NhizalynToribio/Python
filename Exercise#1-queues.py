@@ -105,7 +105,7 @@ lifo_1.append(lifo_input2)
 lifo_1.append(lifo_input3)
 
 print("Third Element:" , lifo_1.pop())
-print("Second Element:" . lifo_1.pop())
+print("Second Element:" , lifo_1.pop())
 print("First Element:" , lifo_1.pop())
 
 
@@ -174,13 +174,12 @@ class PriorityQueue(IterableMixin):
         return heappop(self._elements)
 
 
-# Twelve Code
-from queues import PriorityQueue
-
+# PRIORITY QUEUE DATA TYPE
 CRITICAL = 3
 IMPORTANT = 2
 NEUTRAL = 1
 
+print("First Test of Priority Queue Data Type")
 messages = PriorityQueue()
 
 messages.enqueue_with_priority(IMPORTANT, "Windshield wipers turned on")
@@ -188,7 +187,14 @@ messages.enqueue_with_priority(NEUTRAL, "Radio station tuned in")
 messages.enqueue_with_priority(CRITICAL, "Brake pedal depressed")
 messages.enqueue_with_priority(IMPORTANT, "Hazard lights turned on")
 
-messages.dequeue()
+print(" Messages starting at Critical to Neutral")
+print("Messages: ", messages.dequeue())
+
+print("Messages: ",messages.dequeue())
+
+print("Messages: ",messages.dequeue())
+
+print("Messages: ",messages.dequeue())
 
 
 # Thirteen Code
@@ -204,17 +210,6 @@ class PriorityQueue:
         return heappop(self._elements)[1]
 
 
-# Fourteen Code
-messages.dequeue()
-
-
-messages.dequeue()
-
-
-messages.dequeue()
-
-
-messages.dequeue()
 
 
 # Fifteen Code
