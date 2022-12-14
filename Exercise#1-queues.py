@@ -44,7 +44,7 @@ fifo.enqueue("2nd")
 fifo.enqueue("3rd")
 
 # fifo dequeue statement
-print("This section will show the FIFO QUEUE")
+print("\nThis section will show the First Test in FIFO QUEUE")
 print(fifo.dequeue())
 print(fifo.dequeue())
 print(fifo.dequeue())
@@ -52,8 +52,8 @@ print(fifo.dequeue())
 
 # FIFO QUEUE TESTING with for loop
 fifo_1 = Queue("1st", "2nd", "3rd")
-print("This section will show the FIFO QUEUE")
-print("The elements:", len(fifo))
+print("\nThis section will show the Second Test in FIFO QUEUE")
+print("The elements:", len(fifo_1))
 
 for element in fifo_1:
     print(element)
@@ -62,8 +62,8 @@ print("The elements", len(fifo_1))
 
 
 # Class Queue and Input Statement
-print("\nThis section will show the FIFO QUEUE")
-user1= input("Enter the first element: ")
+print("\nThis section will show the Third Test in FIFO QUEUE")
+user1 = input("Enter the first element: ")
 user2 = input("Enter the second element: ")
 user3 = input("Enter the third element: ")
 
@@ -87,7 +87,7 @@ class Stack(Queue):
 
 
 # LIFO QUEUE TESTING (for loop)
-print("Testing of LIFO QUEUE")
+print("\nFirst Testing of LIFO QUEUE")
 lifo = Stack("1st", "2nd", "3rd")
 
 for element in lifo:
@@ -95,8 +95,8 @@ for element in lifo:
 
 
 # LIFO QUEUE TESTING WITH INPUT
-print("Second Test of LIFO QUEUE")
-lifo_1= []
+print("\nSecond Test of LIFO QUEUE")
+lifo_1 = []
 # Input element
 lifo_input1 = input("Enter the first element: ")
 lifo_input2 = input("Enter the second element: ")
@@ -106,15 +106,15 @@ lifo_1.append(lifo_input1)
 lifo_1.append(lifo_input2)
 lifo_1.append(lifo_input3)
 
-print("Third Element:" , lifo_1.pop())
-print("Second Element:" , lifo_1.pop())
-print("First Element:" , lifo_1.pop())
+print("Third Element: ", lifo_1.pop())
+print("Second Element: ", lifo_1.pop())
+print("First Element: ", lifo_1.pop())
 
 
 # Priority Queue and Heap and Heappush
 from heapq import heappush
 
-print("Priority Queue with Head and Heappush (First Test)")
+print("\nPriority Queue with Head and Heappush (First Test)")
 fruits = []
 
 heappush(fruits, "orange")
@@ -125,7 +125,7 @@ print("This is the fruits element list:", fruits)
 
 
 # Heappush with input statement
-print("Second Test of Priority Queue with Heap and Heappush")
+print("\nSecond Test of Priority Queue with Heap and Heappush")
 fruit_list = []
 fruitinput1 = input("Enter the first fruit: ")
 fruitinput2 = input("Enter the second fruit: ")
@@ -139,18 +139,18 @@ print("List of fruits:", fruit_list)
 
 # Heappop and showing the output
 from heapq import heappop
-print("First Test")
+print("\nFirst Test")
 print("Fruits from the List: ", heappop(fruits))
 
 print("Final output of First Test in the fruit list: ", fruits)
 
-print("Second Test")
+print("\nSecond Test")
 print("Fruits from the List: ", heappop(fruit_list))
-print("Final output of Second Test in the fruit list: " , fruit_list)
+print("Final output of Second Test in the fruit list: ", fruit_list)
 
 
 # Tuples Statement
-print("First test in Tuples")
+print("\nFirst test in Tuples")
 person1 = ("John", "Brown", 42)
 person2 = ("John", "Doe", 42)
 person3 = ("John", "Doe", 24)
@@ -172,7 +172,7 @@ class PriorityQueue(IterableMixin):
         heappush(self._elements, (priority, value))
 
     def dequeue(self):
-        return heappop(self._elements)
+        return heappop(self._elements)[1]
 
 
 # PRIORITY QUEUE DATA TYPE
@@ -180,7 +180,7 @@ CRITICAL = 3
 IMPORTANT = 2
 NEUTRAL = 1
 
-print("First Test of Priority Queue Data Type")
+print("\nFirst Test of Priority Queue Data Type")
 messages = PriorityQueue()
 
 messages.enqueue_with_priority(IMPORTANT, "Windshield wipers turned on")
@@ -229,6 +229,7 @@ class Message:
 
 wipers = Message("Windshield wipers turned on")
 hazard_lights = Message("Hazard lights turned on")
+brake_pedal = Message("Brake pedal depressed")
 
 # Messages
 messages = PriorityQueue1()
@@ -237,15 +238,15 @@ messages.enqueue_with_priority(CRITICAL, wipers)
 messages.enqueue_with_priority(IMPORTANT, hazard_lights)
 
 messages.enqueue_with_priority(CRITICAL, Message("ABS engaged"))
+messages.enqueue_with_priority(CRITICAL, brake_pedal)
 
 print("Priority order")
 print("\n 1- Windshield wipers")
-print("\n 2 - ABS engaged")
-print("\n 3- Hazard lights\n")
+print(" 2 - ABS engaged")
+print(" 3 - Brake Pedal")
+print(" 4- Hazard lights\n")
 
 print(messages.dequeue())
 print(messages.dequeue())
 print(messages.dequeue())
 print(messages.dequeue())
-
-
