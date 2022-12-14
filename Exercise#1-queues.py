@@ -96,33 +96,33 @@ for element in lifo:
 print("Second Test of LIFO QUEUE")
 lifo_1= []
 # Input element
-lifo_input = input("Enter the first element: ")
-lipo_input = input("Enter the second element: ")
-lipo_input = input("Enter the third element: ")
+lifo_input1 = input("Enter the first element: ")
+lifo_input2 = input("Enter the second element: ")
+lifo_input3 = input("Enter the third element: ")
 
-lifo_1.append("1st")
-lifo_1.append("2nd")
-lifo_1.append("3rd")
+lifo_1.append(lifo_input1)
+lifo_1.append(lifo_input2)
+lifo_1.append(lifo_input3)
 
-lifo.pop()
-lifo.pop()
-lifo.pop()
+print("Third Element:" , lifo_1.pop())
+print("Second Element:" . lifo_1.pop())
+print("First Element:" , lifo_1.pop())
 
 
-# Eight Code
-
+# Priority Queue and Heap and Heappush
 from heapq import heappush
 
+print("Priority Queue with Head and Heappush (First Test)")
 fruits = []
 
 heappush(fruits, "orange")
 heappush(fruits, "apple")
 heappush(fruits, "banana")
 
-fruits
+print("This is the fruits element list:", fruits)
 
 
-# Nine Code
+# Heappush with input statement
 
 from heapq import heappop
 
