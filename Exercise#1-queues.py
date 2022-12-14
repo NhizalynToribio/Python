@@ -68,32 +68,29 @@ user3 = input("Enter the third element: ")
 
 fifo_2 = Queue(user1, user2, user3)
 print("The Elements:", len(fifo_2))
-num_input = 1
+inputnumber = 1
 
 while True:
     for element in fifo_2:
-        print("Input No. "f"{numinput}:", element)
-        numinput = numinput + 1
+        print("Input No. "f"{inputnumber}:", element)
+        inputnumber = inputnumber + 1
     break
 
 print("The Elements:", len(fifo_2))
 
-
-
-
+# Stack Data Type
 class Stack(Queue):
     def dequeue(self):
         return self._elements.pop()
 
 
-# Sixth Code
 
-from queues import Stack
-
+# LIFO QUEUE TESTING (for loop)
+print("Testing of LIFO QUEUE")
 lifo = Stack("1st", "2nd", "3rd")
 
 for element in lifo:
-    print(element)
+    print("This is the element", element)
 
 
 # Seventh Code
