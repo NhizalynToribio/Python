@@ -123,12 +123,29 @@ print("This is the fruits element list:", fruits)
 
 
 # Heappush with input statement
+print("Second Test of Priority Queue with Heap and Heappush")
+fruit_list = []
+fruitinput1 = input("Enter the first fruit: ")
+fruitinput2 = input("Enter the second fruit: ")
+fruitinput3 = input("Enter the third fruit: ")
 
+heappush(fruit_list, fruitinput1)
+heappush(fruit_list, fruitinput2)
+heappush(fruit_list, fruitinput3)
+print("List of fruits:", fruit_list)
+
+
+
+# Heappop and showing the output
 from heapq import heappop
+print("First Test")
+print("Fruits from the List: ", heappop(fruits))
 
-heappop(fruits)
+print("Final output of First Test in the fruit list: ", fruits)
 
-fruits
+print("Second Test")
+print("Fruits from the List: ", heappop(fruit_list))
+print("Final output of Second Test in the fruit list: " , fruit_list)
 
 
 # Tenth Code
