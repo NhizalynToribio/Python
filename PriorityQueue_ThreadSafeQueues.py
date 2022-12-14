@@ -39,3 +39,18 @@ def main(args):
         Producer(args.producer_speed, buffer, products)
         for _ in range(args.producers)
     ]
+
+
+    consumers = [
+        Consumer(args.consumer_speed, buffer)
+        for _ in range(args.consumers)
+    ]
+
+    for producer in producers:
+        producer.start()
+
+    for consumer in consumers:
+        consumer.start()
+
+    view = View(buffer, producers, consumers)
+    view.animate()
