@@ -52,3 +52,30 @@ def main(args):
     view.animate()
 
 
+def parse_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-q", "--queue", choices=QUEUE_TYPES, default="fifo")
+    parser.add_argument("-p", "--producers", type=int, default=3)
+    parser.add_argument("-c", "--consumers", type=int, default=2)
+    parser.add_argument("-ps", "--producer-speed", type=int, default=1)
+    parser.add_argument("-cs", "--consumer-speed", type=int, default=1)
+    return parser.parse_args()
+
+
+PRODUCTS = (
+    ":balloon:",
+    ":cookie:",
+    ":crystal_ball:",
+    ":diving_mask:",
+    ":flashlight:",
+    ":gem:",
+    ":gift:",
+    ":kite:",
+    ":postal_horn:",
+    ":party_popper:",
+    ":ribbon:",
+    ":rocket:",
+    ":teddy_bear:",
+    ":thread:",
+    ":yo-yo:",
+)
