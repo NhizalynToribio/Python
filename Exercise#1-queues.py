@@ -84,7 +84,6 @@ class Stack(Queue):
         return self._elements.pop()
 
 
-
 # LIFO QUEUE TESTING (for loop)
 print("Testing of LIFO QUEUE")
 lifo = Stack("1st", "2nd", "3rd")
@@ -93,13 +92,17 @@ for element in lifo:
     print("This is the element", element)
 
 
-# Seventh Code
+# LIFO QUEUE TESTING WITH INPUT
+print("Second Test of LIFO QUEUE")
+lifo_1= []
+# Input element
+lifo_input = input("Enter the first element: ")
+lipo_input = input("Enter the second element: ")
+lipo_input = input("Enter the third element: ")
 
-lifo = []
-
-lifo.append("1st")
-lifo.append("2nd")
-lifo.append("3rd")
+lifo_1.append("1st")
+lifo_1.append("2nd")
+lifo_1.append("3rd")
 
 lifo.pop()
 lifo.pop()
