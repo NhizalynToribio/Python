@@ -85,3 +85,14 @@ PRODUCTS = (
     ":thread:",
     ":yo-yo:",
 )
+
+
+# This shows the class Worker(threading)
+class Worker(threading.Thread):
+    def __init__(self, speed, buffer):
+        super().__init__(daemon=True)
+        self.speed = speed
+        self.buffer = buffer
+        self.product = None
+        self.working = False
+        self.progress = 0
