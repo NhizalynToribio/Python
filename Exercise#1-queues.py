@@ -197,6 +197,47 @@ print("Messages: ",messages.dequeue())
 print("Messages: ",messages.dequeue())
 
 
+# Corner Cases In the Priority Queue
+
+from collections import deque
+from heapq import heappop, heappush
+from itertools import count
+
+
+class PriorityQueue1(IterableMixin):
+    def __init__(self):
+        self._elements = []
+        self._counter = count()
+
+    def enqueue_with_priority(self, priority, value):
+        element = (-priority, next(self._counter), value)
+        heappush(self._elements, element)
+
+    def dequeue(self):
+        return heappop(self._elements)[-1]
+
+
+# Data Classes
+from dataclasses import dataclass
+
+@dataclass
+class Message:
+    event: str
+
+
+wipers = Message("Windshield wipers turned on")
+hazard_lights = Message("Hazard lights turned on")
+
+# Messages
+messages = PriorityQueue1()
+
+messages.enqueue_with_priority(CRITICAL, wipers)
+messages.enqueue_with_priority(IMPORTANT, hazard_lights)
+
+messages.enqueue_with_priority(CRITICAL, Message("ABS engaged"))
+
+
+
 # Thirteen Code
 
 class PriorityQueue:
@@ -212,50 +253,7 @@ class PriorityQueue:
 
 
 
-# Fifteen Code
-from dataclasses import dataclass
 
-@dataclass
-class Message:
-    event: str
-
-
-wipers = Message("Windshield wipers turned on")
-hazard_lights = Message("Hazard lights turned on")
-
-wipers < hazard_lights
-
-
-# Sixteen Code
-messages = PriorityQueue()
-
-messages.enqueue_with_priority(CRITICAL, wipers)
-
-messages.enqueue_with_priority(IMPORTANT, hazard_lights)
-
-
-# Seventeen Code
-messages.enqueue_with_priority(CRITICAL, Message("ABS engaged"))
-
-
-# Eighteen Code
-
-from collections import deque
-from heapq import heappop, heappush
-from itertools import count
-
-
-class PriorityQueue:
-    def __init__(self):
-        self._elements = []
-        self._counter = count()
-
-    def enqueue_with_priority(self, priority, value):
-        element = (-priority, next(self._counter), value)
-        heappush(self._elements, element)
-
-    def dequeue(self):
-        return heappop(self._elements)[-1]
 
 
 
