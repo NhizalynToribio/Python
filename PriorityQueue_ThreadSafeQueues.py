@@ -32,6 +32,7 @@ QUEUE_TYPES = {
 }
 
 
+# This shows the def main of the Program
 def main(args):
     buffer = QUEUE_TYPES[args.queue]()
     products = PRIORITIZED_PRODUCTS if args.queue == "heap" else PRODUCTS
@@ -39,7 +40,6 @@ def main(args):
         Producer(args.producer_speed, buffer, products)
         for _ in range(args.producers)
     ]
-
 
     consumers = [
         Consumer(args.consumer_speed, buffer)
@@ -56,6 +56,7 @@ def main(args):
     view.animate()
 
 
+# This shows the def parse_args, containing to .add argument
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("-q", "--queue", choices=QUEUE_TYPES, default="heap")
@@ -64,3 +65,23 @@ def parse_args():
     parser.add_argument("-ps", "--producer-speed", type=int, default=1)
     parser.add_argument("-cs", "--consumer-speed", type=int, default=1)
     return parser.parse_args()
+
+
+# This shows Products as a list containing a lot of words
+PRODUCTS = (
+    ":balloon:",
+    ":cookie:",
+    ":crystal_ball:",
+    ":diving_mask:",
+    ":flashlight:",
+    ":gem:",
+    ":gift:",
+    ":kite:",
+    ":postal_horn:",
+    ":party_popper:",
+    ":ribbon:",
+    ":rocket:",
+    ":teddy_bear:",
+    ":thread:",
+    ":yo-yo:",
+)
