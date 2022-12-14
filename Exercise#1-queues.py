@@ -51,6 +51,7 @@ print(fifo.dequeue())
 
 # FIFO QUEUE TESTING with for loop
 fifo_1 = Queue("1st", "2nd", "3rd")
+print("This section will show the FIFO QUEUE")
 print("The elements:", len(fifo))
 
 for element in fifo_1:
@@ -59,11 +60,27 @@ for element in fifo_1:
 print("The elements", len(fifo_1))
 
 
-# # Class Queue and Input Statement
+# Class Queue and Input Statement
+print("\nThis section will show the FIFO QUEUE")
+user1= input("Enter the first element: ")
+user2 = input("Enter the second element: ")
+user3 = input("Enter the third element: ")
+
+fifo_2 = Queue(user1, user2, user3)
+print("The Elements:", len(fifo_2))
+num_input = 1
+
+while True:
+    for element in fifo_2:
+        print("Input No. "f"{numinput}:", element)
+        numinput = numinput + 1
+    break
+
+print("The Elements:", len(fifo_2))
 
 
 
-# Fifth Code
+
 class Stack(Queue):
     def dequeue(self):
         return self._elements.pop()
