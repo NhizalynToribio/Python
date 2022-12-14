@@ -159,13 +159,11 @@ print("The first person go before the second person:", person1 < person2)
 print("The second person go before the third person:", person2 < person3)
 
 
-
-# Eleventh Code
+# Priority Queue Data Type
 from collections import deque
 from heapq import heappop, heappush
 
-
-class PriorityQueue:
+class PriorityQueue(IterableMixin):
     def __init__(self):
         self._elements = []
 
