@@ -44,28 +44,26 @@ fifo.enqueue("3rd")
 
 # fifo dequeue statement
 print("This section will show the FIFO QUEUE")
-fifo.dequeue()
-fifo.dequeue()
-fifo.dequeue()
+print(fifo.dequeue())
+print(fifo.dequeue())
+print(fifo.dequeue())
 
 
+# FIFO QUEUE TESTING with for loop
+fifo_1 = Queue("1st", "2nd", "3rd")
+print("The elements:", len(fifo))
 
-
-
-from queues import Queue
-
-fifo = Queue("1st", "2nd", "3rd")
-len(fifo)
-
-
-for element in fifo:
+for element in fifo_1:
     print(element)
 
-len(fifo)
+print("The elements", len(fifo_1))
+
+
+# # Class Queue and Input Statement
+
 
 
 # Fifth Code
-
 class Stack(Queue):
     def dequeue(self):
         return self._elements.pop()
