@@ -23,3 +23,19 @@ from rich.panel import Panel
 
 from dataclasses import dataclass, field
 from enum import IntEnum
+
+# This section shows the QUEUE TYPE WITH def main(args)
+QUEUE_TYPES = {
+    "fifo": Queue,
+    "lifo": LifoQueue,
+    "heap": PriorityQueue
+}
+
+
+def main(args):
+    buffer = QUEUE_TYPES[args.queue]()
+    products = PRIORITIZED_PRODUCTS if args.queue == "heap" else PRODUCTS
+    producers = [
+        Producer(args.producer_speed, buffer, products)
+        for _ in range(args.producers)
+    ]
