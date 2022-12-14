@@ -35,6 +35,7 @@ class Queue(IterableMixin):
     def dequeue(self):
         return self._elements.popleft()
 
+
 # FIFO QUEUE TESTING (enqueue and dequeue)
 # fifo enqueue statement
 fifo = Queue()
@@ -77,6 +78,7 @@ while True:
     break
 
 print("The Elements:", len(fifo_2))
+
 
 # Stack Data Type
 class Stack(Queue):
@@ -135,7 +137,6 @@ heappush(fruit_list, fruitinput3)
 print("List of fruits:", fruit_list)
 
 
-
 # Heappop and showing the output
 from heapq import heappop
 print("First Test")
@@ -146,7 +147,6 @@ print("Final output of First Test in the fruit list: ", fruits)
 print("Second Test")
 print("Fruits from the List: ", heappop(fruit_list))
 print("Final output of Second Test in the fruit list: " , fruit_list)
-
 
 
 # Tuples Statement
@@ -162,6 +162,7 @@ print("The second person go before the third person:", person2 < person3)
 # Priority Queue Data Type
 from collections import deque
 from heapq import heappop, heappush
+
 
 class PriorityQueue(IterableMixin):
     def __init__(self):
@@ -190,11 +191,11 @@ messages.enqueue_with_priority(IMPORTANT, "Hazard lights turned on")
 print(" Messages starting at Critical to Neutral")
 print("Messages: ", messages.dequeue())
 
-print("Messages: ",messages.dequeue())
+print("Messages: ", messages.dequeue())
 
-print("Messages: ",messages.dequeue())
+print("Messages: ", messages.dequeue())
 
-print("Messages: ",messages.dequeue())
+print("Messages: ", messages.dequeue())
 
 
 # Corner Cases In the Priority Queue
@@ -237,5 +238,14 @@ messages.enqueue_with_priority(IMPORTANT, hazard_lights)
 
 messages.enqueue_with_priority(CRITICAL, Message("ABS engaged"))
 
+print("Priority order")
+print("\n 1- Windshield wipers")
+print("\n 2 - ABS engaged")
+print("\n 3- Hazard lights\n")
+
+print(messages.dequeue())
+print(messages.dequeue())
+print(messages.dequeue())
+print(messages.dequeue())
 
 
