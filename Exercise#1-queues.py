@@ -220,6 +220,7 @@ class PriorityQueue1(IterableMixin):
 # Data Classes
 from dataclasses import dataclass
 
+
 @dataclass
 class Message:
     event: str
@@ -238,28 +239,3 @@ messages.enqueue_with_priority(CRITICAL, Message("ABS engaged"))
 
 
 
-# Thirteen Code
-
-class PriorityQueue:
-    def __init__(self):
-        self._elements = []
-
-    def enqueue_with_priority(self, priority, value):
-        heappush(self._elements, (-priority, value))
-
-    def dequeue(self):
-        return heappop(self._elements)[1]
-
-
-
-
-
-
-
-
-
-class Queue(IterableMixin):
-
-class Stack(Queue):
-
-class PriorityQueue(IterableMixin):
