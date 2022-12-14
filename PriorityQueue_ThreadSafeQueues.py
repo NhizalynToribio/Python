@@ -117,3 +117,18 @@ class Worker(threading.Thread):
         for _ in range(100):
             sleep(delay / 100)
             self.progress += 1
+
+
+# This shows the class statement and def__init__ and animate
+class View:
+    def __init__(self, buffer, producers, consumers):
+        self.buffer = buffer
+        self.producers = producers
+        self.consumers = consumers
+
+    def animate(self):
+        with Live(
+            self.render(), screen=True, refresh_per_second=10
+        ) as live:
+            while True:
+                live.update(self.render())
