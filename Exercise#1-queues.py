@@ -148,15 +148,16 @@ print("Fruits from the List: ", heappop(fruit_list))
 print("Final output of Second Test in the fruit list: " , fruit_list)
 
 
-# Tenth Code
 
+# Tuples Statement
+print("First test in Tuples")
 person1 = ("John", "Brown", 42)
 person2 = ("John", "Doe", 42)
 person3 = ("John", "Doe", 24)
 
-person1 < person2
+print("The first person go before the second person:", person1 < person2)
+print("The second person go before the third person:", person2 < person3)
 
-person2 < person3
 
 
 # Eleventh Code
