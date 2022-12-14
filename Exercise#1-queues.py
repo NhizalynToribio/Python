@@ -2,46 +2,23 @@ print("**************** PROGRAMMED BY: *****************")
 print("************** NHIZALYN TORIBIO ****************")
 print("*************** BSCOE 2 - 2 *******************")
 print("**Python Stacks, Queues, and Priority Queues **")
+print("************ Stacks And Queues *****************")
 
-# queues.py
 
+# Importing deque And Refactoring
 from collections import deque
 
 
-class Queue:
-    def __init__(self):
-        self._elements = deque()
+class IterableMixin:
+    def __len__(self):
+        return len(self._elements)
 
-    def enqueue(self, element):
-        self._elements.append(element)
-
-    def dequeue(self):
-        return self._elements.popleft()
+    def __iter__(self):
+        while len(self) > 0:
+            yield self.dequeue()
 
 
-# Second Code
-from queues import Queue
-
-# fifo enqueue statement
-fifo = Queue()
-fifo.enqueue("1st")
-fifo.enqueue("2nd")
-fifo.enqueue("3rd")
-
-# fifo dequeue statement
-fifo.dequeue()
-
-fifo.dequeue()
-
-fifo.dequeue()
-
-
-# Third Code
-
-from collections import deque
-
-
-class Queue:
+class Queue(IterableMixin):
     def __init__(self, *elements):
         self._elements = deque(elements)
 
@@ -58,8 +35,22 @@ class Queue:
     def dequeue(self):
         return self._elements.popleft()
 
+# FIFO QUEUE TESTING (enqueue and dequeue)
+# fifo enqueue statement
+fifo = Queue()
+fifo.enqueue("1st")
+fifo.enqueue("2nd")
+fifo.enqueue("3rd")
 
-# Fourth Code
+# fifo dequeue statement
+print("This section will show the FIFO QUEUE")
+fifo.dequeue()
+fifo.dequeue()
+fifo.dequeue()
+
+
+
+
 
 from queues import Queue
 
@@ -241,14 +232,7 @@ class PriorityQueue:
         return heappop(self._elements)[-1]
 
 
-# Nineteen Code
-class IterableMixin:
-    def __len__(self):
-        return len(self._elements)
 
-    def __iter__(self):
-        while len(self) > 0:
-            yield self.dequeue()
 
 class Queue(IterableMixin):
 
