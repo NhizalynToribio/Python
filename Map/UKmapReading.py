@@ -102,7 +102,7 @@ for city in breadth_first_traverse(graph, nodes["edinburgh"]):
 
 # Shortest Path Using Breadth-First Traversal
 # Revealing the shortest path between two cities
-print("\n8th testing: Using networkx to reveal all the shortest paths between two cities")
+print("\n8th testing")
 nodes, graph = load_graph("roadmap.dot", City.from_dict)
 
 city1 = nodes["aberdeen"]
@@ -113,7 +113,7 @@ for i, path in enumerate(nx.all_shortest_paths(graph, city1, city2), 1):
 
 # Queue-based implementation of the shortest path
 # When you call the queue-based implementation of the shortest path, you get the same results as with networkx
-print("\n9th testing: Queue-based implementation of the shortest path")
+print("\n9th testing")
 print(" → ".join(city.name for city in shortest_path(graph, city1, city2)))
 
 
@@ -125,3 +125,65 @@ print(" → ".join(
     city.name
     for city in shortest_path(graph, city1, city2, by_latitude)
 ))
+
+print("\n10th testing")
+print(connected(graph, nodes["belfast"], nodes["glasgow"]))
+
+print(connected(graph, nodes["belfast"], nodes["derry"]))
+
+
+print("\n11th testing")
+
+
+def is_twentieth_century(year):
+    return year and 1901 <= year <= 2000
+
+
+nodes, graph = load_graph("roadmap.dot", City.from_dict)
+for node in nx.dfs_tree(graph, nodes["edinburgh"]):
+    print("📍", node.name)
+    if is_twentieth_century(node.year):
+        print("Found:", node.name, node.year)
+        break
+else:
+    print("Not found")
+
+
+print("\n12th testing")
+
+
+def is_twentieth_century(city):
+    return city.year and 1901 <= city.year <= 2000
+
+
+nodes, graph = load_graph("roadmap.dot", City.from_dict)
+city = dfs(graph, nodes["edinburgh"], is_twentieth_century)
+print(city.name)
+print("\n")
+for city in depth_first_traverse(graph, nodes["edinburgh"]):
+    print(city.name)
+
+# Testing  Dijkstra’s algorithm
+print("\n13th testing")
+nodes, graph = load_graph("roadmap.dot", City.from_dict)
+city1 = nodes["london"]
+city2 = nodes["edinburgh"]
+
+
+def distance(weights):
+    return float(weights["distance"])
+
+
+for city in dijkstra_shortest_path(graph, city1, city2, distance):
+    print(city.name)
+
+# Networkx implementation
+print("\nCompare to Networkx implementation:")
+
+
+def weight(node1, node2, weights):
+    return distance(weights)
+
+
+for city in nx.dijkstra_path(graph, city1, city2, weight):
+    print(city.name)
