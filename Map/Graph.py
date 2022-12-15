@@ -92,3 +92,37 @@ def retrace(previous, source, destination):
 
     path.appendleft(source)
     return list(path)
+
+
+def connected(graph, source, destination):
+    return shortest_path(graph, source, destination) is not None
+
+# Depth-First Traversal
+def depth_first_traverse(graph, source, order_by=None):
+    stack = Stack(source)
+    visited = set()
+    while stack:
+        if (node := stack.dequeue()) not in visited:
+            yield node
+            visited.add(node)
+            neighbors = list(graph.neighbors(node))
+            if order_by:
+                neighbors.sort(key=order_by)
+            for neighbor in reversed(neighbors):
+                stack.enqueue(neighbor)
+
+# Because the depth-first traversal relies on the stack data structure, you can take advantage of the built-in call stack to save the current search path for later backtracking and rewrite your function recursively
+def recursive_depth_first_traverse(graph, source, order_by=None):
+    visited = set()
+
+    def visit(node):
+        yield node
+        visited.add(node)
+        neighbors = list(graph.neighbors(node))
+        if order_by:
+            neighbors.sort(key=order_by)
+        for neighbor in neighbors:
+            if neighbor not in visited:
+                yield from visit(neighbor)
+
+    return visit(source)
