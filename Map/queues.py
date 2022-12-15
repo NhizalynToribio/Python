@@ -4,7 +4,6 @@ print("*************** BSCOE 2 - 2 *******************")
 print("**Python Stacks, Queues, and Priority Queues **")
 print("*************** Roadmap - Queues *******************")
 
-
 from collections import deque
 from dataclasses import dataclass
 from heapq import heapify, heappop, heappush
