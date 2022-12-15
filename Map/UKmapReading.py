@@ -51,6 +51,7 @@ def by_distance(weights):
 for neighbor, weights in sort_by(graph[nodes["london"]], by_distance):
     print(f"{weights['distance']:>3} miles, {neighbor.name}")
 
+
 print("\n5th testing")
 
 
@@ -100,8 +101,7 @@ print("\n")
 for city in breadth_first_traverse(graph, nodes["edinburgh"]):
     print(city.name)
 
-# Shortest Path Using Breadth-First Traversal
-# Revealing the shortest path between two cities
+
 print("\n8th testing")
 nodes, graph = load_graph("roadmap.dot", City.from_dict)
 
@@ -111,8 +111,7 @@ city2 = nodes["perth"]
 for i, path in enumerate(nx.all_shortest_paths(graph, city1, city2), 1):
     print(f"{i}.", " → ".join(city.name for city in path))
 
-# Queue-based implementation of the shortest path
-# When you call the queue-based implementation of the shortest path, you get the same results as with networkx
+
 print("\n9th testing")
 print(" → ".join(city.name for city in shortest_path(graph, city1, city2)))
 
@@ -163,7 +162,7 @@ print("\n")
 for city in depth_first_traverse(graph, nodes["edinburgh"]):
     print(city.name)
 
-# Testing  Dijkstra’s algorithm
+
 print("\n13th testing")
 nodes, graph = load_graph("roadmap.dot", City.from_dict)
 city1 = nodes["london"]
@@ -177,7 +176,6 @@ def distance(weights):
 for city in dijkstra_shortest_path(graph, city1, city2, distance):
     print(city.name)
 
-# Networkx implementation
 print("\nCompare to Networkx implementation:")
 
 
