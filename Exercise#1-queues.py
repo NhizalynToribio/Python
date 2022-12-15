@@ -87,6 +87,7 @@ class Stack(Queue):
 
 
 # LIFO QUEUE TESTING (for loop)
+print("\n -> STACK DATA TYPE ")
 print("\nFirst Testing of LIFO QUEUE")
 lifo = Stack("1st", "2nd", "3rd")
 
@@ -112,9 +113,10 @@ print("First Element: ", lifo_1.pop())
 
 
 # Priority Queue and Heap and Heappush
-from heapq import heappush
 
-print("\nPriority Queue with Head and Heappush (First Test)")
+from heapq import heappush
+print("\n -> Priority Queues along Heap and Heappush")
+print("\n(First Test) Priority Queue with Heap and Heappush ")
 fruits = []
 
 heappush(fruits, "orange")
@@ -176,6 +178,7 @@ class PriorityQueue(IterableMixin):
 
 
 # PRIORITY QUEUE DATA TYPE
+print("\n -> Priority Queue Data Type ")
 CRITICAL = 3
 IMPORTANT = 2
 NEUTRAL = 1
@@ -200,6 +203,7 @@ print("Messages: ", messages.dequeue())
 
 # Corner Cases In the Priority Queue
 
+print("\n -> Handling Corner Cases in Priority Queue")
 from collections import deque
 from heapq import heappop, heappush
 from itertools import count
