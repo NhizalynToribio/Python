@@ -2,17 +2,15 @@ print("**************** PROGRAMMED BY: *****************")
 print("************** NHIZALYN TORIBIO ****************")
 print("*************** BSCOE 2 - 2 *******************")
 print("**Python Stacks, Queues, and Priority Queues **")
-print("**** Multi Processing Queue *****")
+print("**** Asynchronous Queue *****")
+
 
 import argparse
 import asyncio
 from collections import Counter
-
 import aiohttp
-
 from urllib.parse import urljoin
 from bs4 import BeautifulSoup
-
 import sys
 from typing import NamedTuple
 
