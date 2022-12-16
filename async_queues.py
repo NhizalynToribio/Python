@@ -100,3 +100,5 @@ def parse_links(url, html):
 if __name__ == "__main__":
     asyncio.run(main(parse_args()))
 
+# Run in this in Terminal: python async_queues.py http://localhost:8000 --max-depth=4
+
